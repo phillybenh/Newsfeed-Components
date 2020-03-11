@@ -183,3 +183,4 @@
         container.appendChild(button3);
         container.appendChild(buttonCreator(fakeData[3]));
     ```
+* [Lecture Notes](https://www.notion.so/Components-I-96090141608b468f94b070a78f49bbce)

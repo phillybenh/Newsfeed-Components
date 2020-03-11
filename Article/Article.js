@@ -101,14 +101,43 @@ const data = [
 
   Hint: You will need to use createElement more than once here!
 
-  Your function should take either an object as it's one argument, or 5 separate arguments mapping to each piece of the data object above.
+  Your function should take either an object as it's one argument, or 5 separate arguments mapping to each piece of the data object above. */
+function createAtricle(articleData) {
 
-  Step 2: Add an event listener to the expandButton span. This event listener should toggle the class 'article-open' on the 'article' div.
+  // define new elements
+  const article = document.createElement('div');
+  const title = document.createElement('h2');
+  const date = document.createElement('p');
+  const firstParagraph = document.createElement('p');
+  const secondParagraph = document.createElement('p');
+  const thirdParagraph = document.createElement('p');
+  const expandButton = document.createElement('span');
 
-  Step 3: return the entire component.
+  // setup the structure
+  article.append(title, date, firstParagraph, secondParagraph, thirdParagraph, expandButton);
 
-  Step 4: Map over the data, creating a component for each oject and add each component to the DOM as children of the 'articles' div.
+  // add classes to elements
+  article.classList.add('article');
+  date.classList.add('date');
+  expandButton.classList.add('expandButton');
 
-  Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new article.
+  // set textContent
+  title.textContent = articleData.title;
+  date.textContent = articleData.date;
+  firstParagraph.textContent = articleData.firstParagraph;
+  secondParagraph.textContent = articleData.secondParagraph;
+  thirdParagraph.textContent = articleData.thirdParagraph;
+  expandButton.textContent = "\u25b2";
+
+  return article;
+}
+
+/* Step 2: Add an event listener to the expandButton span. This event listener should toggle the class 'article-open' on the 'article' div.
+
+ Step 3: return the entire component.
+
+ Step 4: Map over the data, creating a component for each oject and add each component to the DOM as children of the 'articles' div.
+
+ Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new article.
 
 */
